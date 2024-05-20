@@ -39,7 +39,7 @@ impl CameraUniform {
     // UPDATED!
     fn update_view_proj(&mut self, camera: &camera::Camera, projection: &camera::Projection) {
         self.view_position = camera.position.to_homogeneous().into();
-        self.view_proj = (projection.calc_matrix() * camera.calc_matrix()).into()
+        self.view_proj = (projection.calc_matrix() * camera.calc_matrix()).into();
     }
 }
 
